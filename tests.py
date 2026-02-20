@@ -16,7 +16,6 @@ class TestBooksCollector:
         collector = BooksCollector()
         collector.add_new_book(book_name)
         assert book_name in collector.books_genre
-        print(book_name)
 
     invalid_book_names = [
         '',
@@ -133,6 +132,11 @@ class TestBooksCollector:
         collector.add_new_book('Артём Каменистый. Самый странный нуб')
         collector.add_book_in_favorites('Артём Каменистый. Самый странный нуб')
         assert 'Артём Каменистый. Самый странный нуб' in collector.favorites
+
+    def test_add_book_in_favorites_unknown_book_fault(self):
+        collector = BooksCollector()
+        collector.add_book_in_favorites('Неизвестная книга')
+        assert 'Неизвестная книга' not in collector.favorites
 
     def test_delete_book_from_favorites_valid_name_success(self):
         collector = BooksCollector()

@@ -17,5 +17,6 @@ tests.py - написаны юнит тесты для коллектора кн
 Успешное получение словаря книг с жанрами: test_get_books_genre_valid_books_success
 Успешное получение книг подходящих детям: test_get_books_for_children_valid_names_success
 Успешное добавление книг в избранное: test_add_book_in_favorites_valid_name_success
+Ошибка добавления в избранное книги, отсутствующей в коллекции: test_add_book_in_favorites_unknown_book_fault
 Успешное удаление книг из избранного: test_delete_book_from_favorites_valid_name_success
 Успешное получение списка избранных книг: test_get_list_of_favorites_books_valid_name_success
